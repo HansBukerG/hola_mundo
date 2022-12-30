@@ -1,0 +1,28 @@
+<section>
+    <div class="row">
+        <h2>Formulario de ingreso de datos</h2>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-2">
+            <label for="">Nombre:</label>
+        </div>
+        <div class="col-md-10">
+            <input type="text" class="form-control" [(ngModel)]="nombre" (change)="comprobarCampo()">
+            <div *ngIf="campoNombre" class="alerta-formulario">Debes completar este campo primero.</div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-2">
+            <label for="">Apellido:</label>
+        </div>
+        <div class="col-md-10">
+            <input type="text" class="form-control" [(ngModel)]="apellido" (change)="comprobarCampo()">
+            <div *ngIf="campoApellido" class="alerta-formulario">Debes completar este campo primero.</div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-2">
+            <button class="btn btn-primary" (click)="agregarPersona()">Ingresar Persona</button>
+        </div>
+    </div>
+</section>

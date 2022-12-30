@@ -1,0 +1,17 @@
+<div class="row">
+    <h2>Formulario de datos</h2>
+</div>
+<div class="row mb-3">
+    <div class="col-md-2"> <label>Operando A:</label> </div>
+    <div class="col-md-5"> <input type="text" class="form-control" (change)="verificarCampo(1)" [(ngModel)]="operandoA"> </div>
+    <div *ngIf="operandoAError" class="alerta-formulario"> Debes completar este campo primero </div>
+
+</div>
+<div class="row mb-3">
+    <div class="col-md-2"> <label>Operando B:</label> </div>
+    <div class="col-md-5"><input type="text" class="form-control" (change)="verificarCampo(2)" [(ngModel)]="operandoB"> </div>
+    <div *ngIf="operandoBError" class="alerta-formulario"> Debes completar este campo primero </div>
+</div>
+<div class="row mb-3">
+    <div class="col-md-2"> <button class="btn btn-primary" (click)="emitirResultado()">Resultado:</button> </div>
+</div>

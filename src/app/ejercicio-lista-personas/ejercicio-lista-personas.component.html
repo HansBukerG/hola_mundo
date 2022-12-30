@@ -1,0 +1,22 @@
+
+<header>
+    <div class="row">
+        <h2>Aplicación de listado de personas</h2>
+    </div>
+</header>
+<section>
+    <!--<app-formulario (personaCreada)="personaAgregada($event)" ></app-formulario>-->
+    <app-formulario></app-formulario>
+</section>
+<section>
+    <div class="row">
+        <h2>Listado de personas</h2>
+    </div>
+    <div class="row">
+    <app-persona-detalle class="col-4" *ngFor="let personaElemento of listaPersonas;let contadorIndex = index "
+        [persona]="personaElemento"
+        [indice]="contadorIndex"
+    ></app-persona-detalle>
+    </div>
+</section>
+

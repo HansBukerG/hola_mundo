@@ -1,0 +1,26 @@
+<div class="container">
+    <header class="row">
+          <h2>Listado de Personas</h2>
+    </header>
+    <section class="row">
+        <div class="col">
+          <button class="btn btn-primary" role="button" [disabled]="deshabilitarElemento" (click)="agregarPersona()">Agregar Persona</button>
+          <p *ngIf="mostrarTexto; else mostrarMensaje">{{mensaje}}</p>
+          <ng-template #mostrarMensaje>
+            <p>Aun no se ha agregado una persona</p>
+          </ng-template>
+          <app-persona></app-persona>
+        </div>
+
+      </section>
+      <section class="row">
+          <label class="form-check-label">Titulo Persona: </label>
+          <!--
+            <input type="text" class="form-control" (input)="modificarTitulo($event)">
+
+          -->
+          <input type="text" class="form-control" [(ngModel)]="titulo">
+          {{titulo}}
+      </section>
+
+</div>

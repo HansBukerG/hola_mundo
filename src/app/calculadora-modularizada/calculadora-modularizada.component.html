@@ -1,0 +1,13 @@
+<header>
+    <h3>Ejercicio: calculadora modularizada</h3>
+    <p>En este ejercicio se plantea el uso de los mismos elementos de la otra calculadora</p>
+    <p>Es solo que a nivel interno la calculadora va a estar particionada en diferentes componentes</p>
+</header>
+
+<section>
+    <app-formulario-calculadora (resultado)="capturarMisiva($event)"></app-formulario-calculadora>
+</section>
+
+<section>
+    <app-calculadora-resultado [resultado]="resultado" ></app-calculadora-resultado>
+</section>

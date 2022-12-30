@@ -1,0 +1,25 @@
+<header>
+  <div class="row mb-3">
+      <h2>Ejercicio de calculadora</h2>
+  </div>
+</header>
+<section>
+    <div class="row mb-3">
+      <div class="col-md-2 mb-3"> <label class="form-check-label">Operando A:</label> </div>
+      <div class="col-md-10 mb-3"><input type="text" class="form-control" [(ngModel)]="operandoA"> </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-md-2 mb-3"> <label class="form-check-label" >Operando B:</label> </div>
+      <div class="col-md-10 mb-3"><input type="text" class="form-control" [(ngModel)]="operandoB"> </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-md-2 mb-3"><button class="btn btn-primary" (click)="sumarValores()">Ejecutar suma</button></div>
+    </div>
+    <div class="row row-cols-2 mb-3">
+      <div class="col-md-2 mb-3"> <label class="form-check-label">Resultado:</label> </div>
+      <div class="col-md-10 mb-3"> <label class="form-check-label"> {{resultadoSuma}} </label> </div>
+    </div>
+    <div class="row row-cols-2">
+
+    </div>
+</section>
